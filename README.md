@@ -1,13 +1,9 @@
 # 🌐 Global Nomad
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/73e78043-9516-4c5e-a3fc-9de78ee0f5ee" alt="메인 페이지" width="600" />
-</p>
-
+![Image](https://github.com/user-attachments/assets/4a15ce9a-0024-427d-9460-1230703d29a2)
 > **" Global Nomad는 캘린더 뷰 SDK와 지도 뷰 SDK를 활용해 예약 가능한 날짜를 설정하고, 체험 상품을 예약하는 기능을 제공하는 웹 애플리케이션입니다."**
+> 
 
 ---
-
 ### 📚 목차
 - [👤 팀원 소개 & 역할]
 - [🔗 배포 환경 및 기간]
@@ -64,10 +60,11 @@
     <td>
       <ul>
         <li>global.css</li>
-        <li>Search 컴포넌트</li>
+        <li>검색 컴포넌트, Top 버튼</li>
         <li>사이드 프로필</li>
         <li>빈 화면 페이지</li>
-        <li>예약 내역 페이지</li>
+        <li>예약 내역 페이지 및 무한스크롤</li>
+        <li>404 에러 페이지</li>
       </ul>
     </td>
   </tr>
@@ -120,22 +117,95 @@
 
 
 ### 🔗 배포 환경 및 기간
-- **배포 주소**: [Global Nomad](배포 후 주소 업데이트 하겠습니다 )
+- **배포 주소**: [Global Nomad](https://global-nomad-black.vercel.app/)
 - **배포 환경**: vercel
-- **개발 기간**: 2025.05.27 ~ 2025.06.26
+- **개발 기간**: 2025.05.27 ~ 2025.06.23
 
 ---
 
-### ✨ 주요 기능 요약
-- 예약 가능한 날짜/시간 확인 및 선택 (캘린더 뷰 SDK)
-- 체험 상품 예약 및 참여 인원 설정
-- 카테고리/가격/검색 필터로 체험 탐색
-- 무한 스크롤 (인기 체험 탐색)
-- 내 정보 관리 (프로필, 닉네임, 비밀번호)
-- 내 체험 관리 (등록, 수정, 삭제, 예약 현황 확인)
-- 예약 상태별 관리 (대기/승인/거절/완료)
-- 알림 기능 (예약 상태 변경 알림)
+### 🔐 테스트 로그인 안내
 
+> 회원가입 없이 서비스를 바로 체험해볼 수 있도록 테스트 계정을 제공합니다.
+> 로그인 후 예약, 후기 작성, 내정보 수정 등의 기능을 자유롭게 테스트해보세요.
+- **이메일:** `test@gmail.com`  
+- **비밀번호:** `12341234`
+---
+
+### ✨ 주요 기능 
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/1c878f0f-e5db-4ab6-b872-06ab5b392f5d" width="100%"/><br/>
+      <strong>회원가입</strong>
+      <p style="text-align: left;">이메일과 비밀번호를 입력하여 간편하게 회원가입할 수 있으며, 유효성 검사를 통해 정확한 정보만 입력됩니다.</p>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/f72a8e83-994d-4890-80b8-06a0ee0840e0" width="100%"/><br/>
+      <strong>로그인</strong>
+      <p style="text-align: left;">가입한 계정으로 로그인하여 체험 예약 및 후기를 작성할 수 있습니다. 로그인 정보는 안전하게 관리됩니다.</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/e2c919f3-4944-4c7c-bdd2-789b28156080" width="100%"/><br/>
+      <strong>체험상세 조회</strong>
+      <p style="text-align: left;">체험의 위치, 일정, 가격, 설명 등을 상세히 확인할 수 있어 예약 전 충분한 정보 탐색이 가능합니다.</p>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/ecec065d-d120-4a81-a319-6470bd8b621b" width="100%"/><br/>
+      <strong>예약하기</strong>
+      <p style="text-align: left;">희망하는 날짜와 인원을 선택하여 체험을 예약할 수 있습니다. 예약 가능 여부는 실시간으로 확인됩니다.</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/c6374df2-9778-45f5-a329-b88bb4530cb4" width="100%"/><br/>
+      <strong>예약 승인 및 알림기능</strong>
+      <p style="text-align: left;">체험 제공자가 예약을 승인하면, 사용자에게 실시간 알림을 통해 예약 확정 여부를 안내합니다.</p>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/bed6731d-f65c-425f-b6ec-fd6d5297b8ed" width="100%"/><br/>
+      <strong>예약내역</strong>
+      <p style="text-align: left;">예정된 예약을 무한 스크롤 방식과 필터 기능을 통해 예약 상태도 직접 확인할 수 있다.</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/11760a17-ad01-4493-a320-97325207f392" width="100%"/><br/>
+      <strong>체험후기 작성 및 예약취소</strong>
+      <p style="text-align: left;">참여한 체험에 대한 후기를 남길 수 있고, 체험 일정 이전에는 예약을 간편하게 취소할 수 있습니다.</p>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/73b1b51c-842c-4ad9-8def-ae1369346ca6" width="100%"/><br/>
+      <strong>내정보 수정</strong>
+      <p style="text-align: left;">프로필 이미지, 닉네임, 연락처, 비밀번호 등의 개인정보를 수정할 수 있습니다.</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/97a5c658-ca8c-4dd5-a2c6-4f405c0454b4" width="100%"/><br/>
+      <strong>체험 등록</strong>
+      <p style="text-align: left;">체험 제공자가 새로운 체험을 등록할 수 있는 기능입니다. 일정, 설명, 위치, 이미지를 포함한 정보를 입력할 수 있습니다.</p>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/5e7cec97-b127-4cf5-a2ae-b133b20eb4bb" width="100%"/><br/>
+      <strong>체험 수정</strong>
+      <p style="text-align: left;">체험 제공자가 불러온 체험을 일정, 설명, 이미지 등을 간편하게 수정할 수 있습니다.</p>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/1ce698eb-9b59-4547-a774-a477b085839d" width="100%"/><br/>
+      <strong>체험 삭제</strong>
+      <p style="text-align: left;">운영이 종료된 체험은 삭제하여 더 이상 사용자에게 노출되지 않도록 관리할 수 있습니다.</p>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/109f3191-cdf3-4816-8835-5b70ea30e5a1" width="100%"/><br/>
+      <strong>404 페이지</strong>
+      <p style="text-align: left;">존재하지 않는 주소로 접근 시, 사용자에게 친절한 안내 메시지를 제공하는 페이지입니다.</p>
+    </td>
+  </tr>
+</table>
 
 ### ⚙️ 설치 및 실행 방법
 
@@ -256,7 +326,7 @@ $ npm run dev
 │   │   ├── api/                 # API 라우트 핸들러 (Route Handlers)
 │   │   │   └── hello/
 │   │   │       └── route.ts
-│   │   ├── layout.tsx    pa       # 루트 레이아웃
+│   │   ├── layout.tsx           # 루트 레이아웃
 │   │   ├── page.tsx             # 루트 페이지
 │   │   └── global.css           # 전역 스타일 (Tailwind CSS import 등)
 │   ├── components/              # 재사용 가능한 UI 컴포넌트
@@ -333,12 +403,6 @@ $ npm run dev
 | Test | ✅ 테스트 코드 |
 | Chore | 🔧 기타 설정 변경 |
 
-### 예시
-
-```bash
-✨ Feat: 위키 카드 컴포넌트 생성
-- 사용자 이미지 및 소개 텍스트 구현
-- 반응형 레이아웃 처리 완료
 ```
 
 ---
